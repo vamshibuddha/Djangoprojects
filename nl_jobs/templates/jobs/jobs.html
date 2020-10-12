@@ -1,10 +1,43 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/demo.css"%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Netherlands Jobs</title>
 </head>
 <body>
-
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4" align="center">Welcome to Netherlands Job Portal</h1>
+    <p class="lead" align="center">Here you can find all jobs in netherlands for ICT</p>
+  </div>
+</div>
+    {% if job_list %}
+    <table class="table table-dark">
+        <thead>
+            <th>Job-Num</th>
+            <th>Job-Description</th>
+            <th>Job-Location</th>
+            <th>Job-skill</th>
+            <th>Job-salary</th>
+            <th>Job-Start-Date</th>
+        </thead>
+        {% for job in job_list %}
+        <tr>
+            <td>{{job.job_no}}</td>
+            <td>{{job.job_des}}</td>
+            <td>{{job.job_loc}}</td>
+            <td>{{job.job_skill}}</td>
+            <td>{{job.job_sal}}</td>
+            <td>{{job.job_stdt}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <P>No Job found</P>
+    {% endif %}
 </body>
 </html>
