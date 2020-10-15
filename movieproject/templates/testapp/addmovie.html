@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addmovie</title>
+    <link rel="stylesheet" href="{% static "css/movie.css" %}">
+</head>
+<body>
+    <div class="container" align="center">
+        <h1>Add movie Information</h1><hr>
+            <form method="post">
+            {{form.as_p}}
+            {%csrf_token%}
+            <input type="submit" class="btn btn-primary" value="Add Movie">
+            </form>
+    </div>
+</body>
+</html>

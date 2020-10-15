@@ -1,0 +1,16 @@
+body{
+background: url("https://images.unsplash.com/photo-1602104831807-27bd4859c77e?ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80");
+background-repeat : no-repeat;
+background-size : cover;
+}
+.container .jumbotron{
+margin-top: 200px;
+background:orange;
+color: white;
+}
+h1{
+color : red;
+}
+form{
+border: 2px groove orange;
+}
