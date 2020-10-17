@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lower</title>
+</head>
+<body>
+{% for r in data_list %}
+<ul>
+    <li>{{r.name|title}}</li>
+    <li>{{r.subject|lower}}</li>
+    <li>{{r.dept|lower}}</li>
+    <li>{{r.date|date:"Y-m-d"}}</li>
+</ul>
+<hr>
+{% endfor %}
+</body>
+</html>
